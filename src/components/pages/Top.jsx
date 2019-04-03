@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
+import { Link } from "react-router-dom";
 import iphone from "../../images/iphone.png";
 import googlePlayBadge from "../../images/google-play-badge.png";
 import appleStore from "../../images/apple-store.svg";
@@ -85,10 +86,17 @@ export default class extends Component {
           }}
         >
           <div style={{ color: "#fff", fontSize: "13px", padding: "1rem" }}>
-            利用規約
+            <Link to="/tos" style={{ color: "#fff", textDecoration: "none" }}>
+              利用規約
+            </Link>
           </div>
           <div style={{ color: "#fff", fontSize: "13px", padding: "1rem" }}>
-            プライパシーポリシー
+            <Link
+              to="/policy"
+              style={{ color: "#fff", textDecoration: "none" }}
+            >
+              プライパシーポリシー
+            </Link>
           </div>
         </div>
       </>
