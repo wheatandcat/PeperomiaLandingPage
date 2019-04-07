@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
-import iphone from "../../images/iphone.png";
+import iphone1 from "../../images/iphone1.png";
 import googlePlayBadge from "../../images/google-play-badge.png";
 import appleStore from "../../images/apple-store.svg";
 
@@ -36,10 +36,14 @@ export default class extends Component {
               justifyContent: "center",
               alignItems: "center",
               backgroundColor: "#28AEB2"
-              //paddingRight: "20rem"
             }}
           >
-            <img src={iphone} height="300" alt="iphone" />
+            <img
+              src={iphone1}
+              height="300"
+              alt="iphone"
+              style={{ zIndex: 2 }}
+            />
           </Grid>
           <Grid
             item
@@ -54,7 +58,7 @@ export default class extends Component {
             }}
           >
             <div style={{ color: "#000", fontSize: "16px", fontWeight: "600" }}>
-              予定を簡単登録、共有できる！
+              予定を簡単登録、共有できるアプリ！
             </div>
           </Grid>
           <Grid
@@ -74,8 +78,6 @@ export default class extends Component {
           </Grid>
         </Grid>
         <div
-          item
-          xs={12}
           style={{
             display: "flex",
             justifyContent: "flex-end	",
