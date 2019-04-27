@@ -189,8 +189,20 @@ export default class extends Component {
               backgroundColor: "#28AEB2"
             }}
           >
-            <img src={appleStore} height="50" alt="appleStore" />
-            <img src={googlePlayBadge} height="70" alt="googlePlayBadge" />
+            <a
+              href="https://itunes.apple.com/us/app/%E3%83%9A%E3%83%9A%E3%83%AD%E3%83%9F%E3%82%A2/id1460583871?l=ja#?platform=iphone"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={appleStore} height="50" alt="appleStore" />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.wheatandcat.peperomia"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={googlePlayBadge} height="70" alt="googlePlayBadge" />
+            </a>
           </Grid>
         </Grid>
 
