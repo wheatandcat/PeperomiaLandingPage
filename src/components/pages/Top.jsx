@@ -8,6 +8,18 @@ import home from "../../images/intro_home.png";
 import plan from "../../images/intro_plan.png";
 import schedule from "../../images/intro_schedule.png";
 import share from "../../images/intro_share.png";
+import share2 from "../../images/intro_share2.png";
+
+const getMediaSize = (l, m, s) => {
+  const innerWidth = window.innerWidth;
+  if (innerWidth >= 1024) {
+    return l;
+  } else if (innerWidth >= 480) {
+    return m;
+  } else {
+    return s;
+  }
+};
 
 export default class extends Component {
   render() {
@@ -150,17 +162,23 @@ export default class extends Component {
               <div style={{ fontWeight: "600", textAlign: "center" }}>
                 予定を共有
               </div>
-              <img src={share} height="200" alt="share" style={{ zIndex: 2 }} />
+              <img
+                src={getMediaSize(share, share2, share2)}
+                height="200"
+                alt="share"
+                style={{ zIndex: 2 }}
+              />
             </div>
           </Grid>
           <Grid
             item
             xs={12}
             style={{
+              display: "flex",
               justifyContent: "center",
               alignItems: "center",
               height: "200px",
-              padding: "80px",
+              padding: getMediaSize("80px", "20px", "5px"),
               backgroundColor: "#FFF",
               textAlign: "center"
             }}
@@ -169,8 +187,7 @@ export default class extends Component {
               style={{
                 fontWeight: "600",
                 fontSize: "25px",
-                paddingLeft: "25px",
-                textEmphasis: "filled sesame #cc00cc;"
+                paddingLeft: getMediaSize("25px", "10px", "5px")
               }}
             >
               必要な機能<span style={{ color: "red" }}>だけ</span>
@@ -185,7 +202,7 @@ export default class extends Component {
               justifyContent: "center",
               alignItems: "center",
               height: "200px",
-              padding: "50px",
+              padding: getMediaSize("50px", "15px", "5px"),
               backgroundColor: "#28AEB2"
             }}
           >
@@ -194,14 +211,22 @@ export default class extends Component {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={appleStore} height="50" alt="appleStore" />
+              <img
+                src={appleStore}
+                height={getMediaSize("50", "40", "40")}
+                alt="appleStore"
+              />
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.wheatandcat.peperomia"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img src={googlePlayBadge} height="70" alt="googlePlayBadge" />
+              <img
+                src={googlePlayBadge}
+                height={getMediaSize("70", "60", "60")}
+                alt="googlePlayBadge"
+              />
             </a>
           </Grid>
         </Grid>
