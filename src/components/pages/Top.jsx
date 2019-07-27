@@ -3,6 +3,13 @@ import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Fab from "@material-ui/core/Fab";
+import Iframe from "react-iframe";
+import PhoneIphone from "@material-ui/icons/PhoneIphone";
+import Snackbar from "@material-ui/core/Snackbar";
+import SnackbarContent from "@material-ui/core/SnackbarContent";
+import { styled as materialStyled } from "@material-ui/core/styles";
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import { isMobile } from "mobile-device-detect";
 import iphoneScreen from "../../images/iphone_screen.png";
 import googlePlayBadge from "../../images/google-play-badge.png";
 import appleStore from "../../images/apple-store.svg";
@@ -20,12 +27,6 @@ import screen051 from "../../images/screen05_1.png";
 import screen052 from "../../images/screen05_2.png";
 import grayIcon from "../../images/gray_icon.png";
 import github from "../../images/github.png";
-import Iframe from "react-iframe";
-import PhoneIphone from "@material-ui/icons/PhoneIphone";
-import Snackbar from "@material-ui/core/Snackbar";
-import SnackbarContent from "@material-ui/core/SnackbarContent";
-import { styled as materialStyled } from "@material-ui/core/styles";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import theme from "../../theme";
 
 export default class extends Component {
@@ -121,7 +122,7 @@ export default class extends Component {
                 paddingRight: 170
               }}
             >
-              {!this.state.success && (
+              {!isMobile && !this.state.success && (
                 <Fab
                   aria-label="save"
                   color="secondary"
