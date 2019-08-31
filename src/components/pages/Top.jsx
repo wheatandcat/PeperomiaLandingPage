@@ -118,8 +118,8 @@ export default class extends Component {
             <div
               style={{
                 position: "absolute",
-                paddingBottom: 360,
-                paddingRight: 170
+                paddingBottom: 390,
+                paddingRight: 190
               }}
             >
               {!isMobile && !this.state.success && (
@@ -256,157 +256,191 @@ export default class extends Component {
           </div>
 
           <Description6Container>
-            <div>
-              <Description6Text>
-                ペペロミアはdeveloper向けにオープンソースとして公開しています。
-              </Description6Text>
+            <Grid
+              container
+              alignItems="center"
+              style={{
+                width: "100%",
+                height: "100%"
+              }}
+            >
+              <Grid item xs={12} md={6}>
+                <Description6Text>
+                  ペペロミアはdeveloper向けにオープンソースとして公開しています。
+                </Description6Text>
 
-              <br />
-              <GitHubLink
-                href="https://github.com/wheatandcat/Peperomia"
-                rel="noreferrer noopener"
-                target="_blank"
-              >
-                https://github.com/wheatandcat/Peperomia
-              </GitHubLink>
-            </div>
-            <div>
-              <GitHubIcon src={github} alt="github" />
-            </div>
+                <br />
+                <GitHubLink
+                  href="https://github.com/wheatandcat/Peperomia"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  https://github.com/wheatandcat/Peperomia
+                </GitHubLink>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                  <GitHubIcon src={github} alt="github" />
+                </div>
+              </Grid>
+            </Grid>
           </Description6Container>
 
           <Description7Container>
-            <div>
-              <CodeIcon src={code} alt="code" />
-            </div>
-            <div
+            <Grid
+              container
+              alignItems="center"
               style={{
-                paddingRight: "1rem"
+                width: "100%",
+                height: "100%"
               }}
             >
-              <Description7Text>開発者ブログ</Description7Text>
-
-              <br />
-              <BlogLink
-                href="https://wheatandcat.hatenablog.com"
-                rel="noreferrer noopener"
-                target="_blank"
-              >
-                https://wheatandcat.hatenablog.com
-              </BlogLink>
-            </div>
-          </Description7Container>
-          <div style={{ padding: 15, paddingBottom: 150, width: "100%" }}>
-            <ProductName>Peperomia</ProductName>
-            <Grid container>
-              <Grid item xs={12} md={6} lg={3}>
-                <FooterTitle>Download</FooterTitle>
-
-                <FooterLink>
-                  <a
-                    href="https://itunes.apple.com/us/app/%E3%83%9A%E3%83%9A%E3%83%AD%E3%83%9F%E3%82%A2/id1460583871?l=ja#?platform=iphone"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Apple Store
-                  </a>
-                </FooterLink>
-
-                <FooterLink>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.wheatandcat.peperomia"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Google Play
-                  </a>
-                </FooterLink>
+              <Grid item xs={12} md={6}>
+                <CodeIcon src={code} alt="code" />
               </Grid>
-
-              <Grid item xs={12} md={6} lg={3}>
-                <FooterTitle>Development</FooterTitle>
-
-                <FooterLink>
-                  <a
-                    href="https://github.com/wheatandcat/Peperomia"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    GitHub
-                  </a>
-                </FooterLink>
-
-                <FooterLink>
-                  <a
-                    href="https://www.figma.com/file/YYon1ahSQ7W15Mug0LsovHws/%E3%83%9A%E3%83%9A%E3%83%AD%E3%83%9F%E3%82%A2?node-id=352%3A3"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Figma
-                  </a>
-                </FooterLink>
-
-                <FooterLink>
-                  <a
-                    href="https://expo.io/@wheatandcat/peperomia"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Expo
-                  </a>
-                </FooterLink>
-
-                <FooterLink>
-                  <a
-                    href="https://app.swaggerhub.com/apis-docs/wheatandcat/peperomia/1.0.0"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    SwaggerHub
-                  </a>
-                </FooterLink>
-              </Grid>
-
-              <Grid item xs={6} md={6} lg={3}>
-                <FooterTitle>Documents</FooterTitle>
-
-                <FooterLink>
-                  <a
+              <Grid item xs={12} md={6}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end"
+                  }}
+                >
+                  <Description7Text>開発者ブログ</Description7Text>
+                </div>
+                <br />
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end"
+                  }}
+                >
+                  <BlogLink
                     href="https://wheatandcat.hatenablog.com"
-                    rel="noopener noreferrer"
+                    rel="noreferrer noopener"
                     target="_blank"
                   >
-                    Blog
-                  </a>
-                </FooterLink>
-              </Grid>
-
-              <Grid item xs={12} md={6} lg={3}>
-                <FooterTitle>Rules</FooterTitle>
-
-                <FooterLink>
-                  <a
-                    href="https://peperomia.app/tos"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    利用規約
-                  </a>
-                </FooterLink>
-
-                <FooterLink>
-                  <a
-                    href="https://peperomia.app/policy"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    プライパシーポリシー
-                  </a>
-                </FooterLink>
+                    https://wheatandcat.hatenablog.com
+                  </BlogLink>
+                </div>
               </Grid>
             </Grid>
-          </div>
+          </Description7Container>
         </Grid>
+
+        <FooterContainer>
+          <ProductName>Peperomia</ProductName>
+          <Grid container>
+            <Grid item xs={12} md={6} lg={3}>
+              <FooterTitle>Download</FooterTitle>
+
+              <FooterLink>
+                <a
+                  href="https://itunes.apple.com/us/app/%E3%83%9A%E3%83%9A%E3%83%AD%E3%83%9F%E3%82%A2/id1460583871?l=ja#?platform=iphone"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Apple Store
+                </a>
+              </FooterLink>
+
+              <FooterLink>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.wheatandcat.peperomia"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Google Play
+                </a>
+              </FooterLink>
+              <br />
+            </Grid>
+
+            <Grid item xs={12} md={6} lg={3}>
+              <FooterTitle>Development</FooterTitle>
+
+              <FooterLink>
+                <a
+                  href="https://github.com/wheatandcat/Peperomia"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+              </FooterLink>
+
+              <FooterLink>
+                <a
+                  href="https://www.figma.com/file/YYon1ahSQ7W15Mug0LsovHws/%E3%83%9A%E3%83%9A%E3%83%AD%E3%83%9F%E3%82%A2?node-id=352%3A3"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Figma
+                </a>
+              </FooterLink>
+
+              <FooterLink>
+                <a
+                  href="https://expo.io/@wheatandcat/peperomia"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Expo
+                </a>
+              </FooterLink>
+
+              <FooterLink>
+                <a
+                  href="https://app.swaggerhub.com/apis-docs/wheatandcat/peperomia/1.0.0"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  SwaggerHub
+                </a>
+              </FooterLink>
+              <br />
+            </Grid>
+
+            <Grid item xs={6} md={6} lg={3}>
+              <FooterTitle>Documents</FooterTitle>
+
+              <FooterLink>
+                <a
+                  href="https://wheatandcat.hatenablog.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Blog
+                </a>
+              </FooterLink>
+              <br />
+            </Grid>
+
+            <Grid item xs={12} md={6} lg={3}>
+              <FooterTitle>Rules</FooterTitle>
+
+              <FooterLink>
+                <a
+                  href="https://peperomia.app/tos"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  利用規約
+                </a>
+              </FooterLink>
+
+              <FooterLink>
+                <a
+                  href="https://peperomia.app/policy"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  プライパシーポリシー
+                </a>
+              </FooterLink>
+              <br />
+            </Grid>
+          </Grid>
+        </FooterContainer>
       </>
     );
   }
@@ -559,9 +593,6 @@ const Screen52 = styled.img`
 const Description6Container = styled.div`
   background-color: ${props => props.theme.color.highLightGray};
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 11rem;
   padding: 0 1.5rem;
   border-top: inset 2px ${props => props.theme.color.darkGray};
@@ -588,9 +619,6 @@ const GitHubIcon = styled.img`
 const Description7Container = styled.div`
   background-color: ${props => props.theme.color.darkGray};
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 11rem;
   padding: 0 1.5rem;
 `;
@@ -616,13 +644,21 @@ const BlogLink = styled.a`
 
 const ProductName = styled.div`
   color: "#000";
+  padding-left: 15px;
   font-size: 1.5rem;
   font-weight: 300;
   padding-top: 0.7rem;
   padding-bottom: 2.5rem;
 `;
 
+const FooterContainer = styled.div`
+  padding-bottom: 150px;
+  width: 100%;
+  background-color: ${props => props.theme.color.white};
+`;
+
 const FooterTitle = styled.div`
+  padding-left: 15px;
   color: ${props => props.theme.color.darkGray};
   font-size: 0.9rem;
   font-weight: 700;
@@ -636,6 +672,7 @@ const FooterLink = styled.div`
   padding: 0.4rem 0;
 
   a {
+    padding-left: 15px;
     text-decoration: none;
     color: "#000";
   }
