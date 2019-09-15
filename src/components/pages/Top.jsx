@@ -10,6 +10,7 @@ import SnackbarContent from "@material-ui/core/SnackbarContent";
 import { styled as materialStyled } from "@material-ui/core/styles";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import { isMobile } from "mobile-device-detect";
+import Doujinshi from "../organisms/Doujinshi";
 import iphoneScreen from "../../images/iphone_screen.png";
 import googlePlayBadge from "../../images/google-play-badge.png";
 import appleStore from "../../images/apple-store.svg";
@@ -155,6 +156,7 @@ export default class extends Component {
               <img src={iphoneScreen} height="425" alt="apple store" />
             )}
           </ProtoContainer>
+          <Doujinshi />
           <Description1Container item lg={3} md={6} xs={12}>
             <div>
               <ScreenTitleContainer>
