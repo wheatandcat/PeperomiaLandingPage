@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import Grid from "@material-ui/core/Grid";
-import styled from "styled-components";
-import cover from "../../images/doujinshi/cover.png";
-import backcover from "../../images/doujinshi/backcover.png";
-import spine from "../../images/doujinshi/spine.png";
-import boothicon from "../../images/doujinshi/200x40_01.png";
-import { Button } from "@material-ui/core";
+import React, { Component } from 'react';
+import Grid from '@material-ui/core/Grid';
+import styled from 'styled-components';
+import cover from '../../images/doujinshi/cover.png';
+import backcover from '../../images/doujinshi/backcover.png';
+import spine from '../../images/doujinshi/spine.png';
+import boothicon from '../../images/doujinshi/200x40_01.png';
+import { Button } from '@material-ui/core';
 
 export default class extends Component {
   render() {
@@ -19,7 +19,7 @@ export default class extends Component {
               <BookImage src={cover} />
             </BookContainer>
           </Grid>
-          <Grid item sm={6} xs={12} style={{ paddingTop: "15px" }}>
+          <Grid item sm={6} xs={12} style={{ paddingTop: '15px' }}>
             <Title>同人誌作りました。</Title>
             <Description>
               技術書典7にてペペロミアの開発解説本を販売します。
@@ -69,7 +69,7 @@ export default class extends Component {
             >
               <Cycle>
                 <CycleInImage src={cover} />
-                <ChackButton variant="contained">商品ページを確認</ChackButton>
+                <CheckButton variant="contained">商品ページを確認</CheckButton>
               </Cycle>
             </a>
           </CycleContainer>
@@ -95,11 +95,11 @@ const BookContainer = styled.div`
 
 const BookImage = styled.img`
   height: 230px;
-  border: solid 1px ${props => props.theme.color.gray};
+  border: solid 1px ${(props) => props.theme.color.gray};
 `;
 
 const Title = styled.div`
-  color: ${props => props.theme.color.white};
+  color: ${(props) => props.theme.color.white};
   font-size: 2rem;
   font-weight: 900;
   padding-bottom: 1rem;
@@ -107,14 +107,14 @@ const Title = styled.div`
 `;
 
 const Description = styled.div`
-  color: ${props => props.theme.color.white};
+  color: ${(props) => props.theme.color.white};
   font-size: 0.9rem;
   font-weight: 600;
   padding: 0 15px;
 `;
 
 const EventInfo = styled.div`
-  color: ${props => props.theme.color.black};
+  color: ${(props) => props.theme.color.black};
   font-size: 0.8rem;
   font-weight: 600;
   padding: 15px;
@@ -122,7 +122,7 @@ const EventInfo = styled.div`
 `;
 
 const Place = styled.span`
-  color: ${props => props.theme.color.white};
+  color: ${(props) => props.theme.color.white};
   font-size: 1.3rem;
   font-weight: 600;
   padding-left: 5px;
@@ -148,7 +148,7 @@ const BookTitkeContainer = styled.div`
 `;
 
 const Price = styled.div`
-  color: ${props => props.theme.color.black};
+  color: ${(props) => props.theme.color.black};
   font-size: 0.9rem;
   font-weight: 800;
 `;
@@ -170,7 +170,7 @@ const BoothIcon = styled.img`
 
 const BoothText = styled.div`
   padding: 20px 0;
-  color: ${props => props.theme.color.black};
+  color: ${(props) => props.theme.color.black};
   font-size: 0.9rem;
   font-weight: 800;
 `;
@@ -200,12 +200,13 @@ const CycleInImage = styled.img`
   border: solid 1px #ccc;
 `;
 
-const ChackButton = styled(Button)`
+const CheckButton = styled(Button)`
   background-color: #eb5757 !important;
-  color: ${props => props.theme.color.white} !important;
+  color: ${(props) => props.theme.color.white} !important;
   font-weight: 800 !important;
   margin: 5px 0 !important;
   font-size: 12px !important;
   padding: 6px 25px !important;
   border-radius: 25px !important;
+  min-height: 40px !important;
 `;
