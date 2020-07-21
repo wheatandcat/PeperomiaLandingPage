@@ -30,6 +30,27 @@ export default () => {
             </a>
           </FooterLink>
           <br />
+          <FooterTitle>Service</FooterTitle>
+
+          <FooterLink>
+            <a
+              href="https://app.peperomia.info"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Web版 ペペロミア
+            </a>
+          </FooterLink>
+
+          <FooterLink>
+            <a
+              href="https://amazing-hawking-a280c3.netlify.app/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              ヘルプ
+            </a>
+          </FooterLink>
         </Grid>
 
         <Grid item xs={12} md={6} lg={3}>
@@ -43,6 +64,62 @@ export default () => {
             >
               GitHub
             </a>
+            <ul>
+              <li>
+                <Link
+                  href="https://github.com/wheatandcat/Peperomia"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Peperomia
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://github.com/wheatandcat/PeperomiaBackend"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Backend
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://github.com/wheatandcat/PeperomiaWeb"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  PeperomiaWeb
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://github.com/wheatandcat/PeperomiaHelp"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  PeperomiaHelp
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://github.com/wheatandcat/PeperomiaWebSite"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  PeperomiaWebSite
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://github.com/wheatandcat/PeperomiaTool"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  PeperomiaTool
+                </Link>
+              </li>
+            </ul>
           </FooterLink>
 
           <FooterLink>
@@ -82,7 +159,7 @@ export default () => {
 
           <FooterLink>
             <a
-              href="https://wheatandcat.hatenablog.com"
+              href="https://www.wheatandcat.me"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -150,17 +227,30 @@ const FooterLink = styled.div`
   font-weight: 500;
   padding: 0.4rem 0;
 
-  a {
+  > a {
     padding-left: 15px;
     text-decoration: none;
     color: '#000';
   }
 
-  a:link {
+  > a:link {
     color: '#000';
   }
 
-  a:visited {
+  > a:visited {
+    color: ${(props) => props.theme.color.darkGray};
+  }
+`;
+
+const Link = styled.a`
+  text-decoration: none;
+  color: '#000';
+
+  :link {
+    color: '#000';
+  }
+
+  :visited {
     color: ${(props) => props.theme.color.darkGray};
   }
 `;

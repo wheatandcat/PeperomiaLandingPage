@@ -5,10 +5,12 @@
   "dependencies": {
     "@material-ui/core": "^4.2.1",
     "@material-ui/icons": "^4.2.1",
+    "intersection-observer": "^0.11.0",
     "mobile-device-detect": "^0.2.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-iframe": "^1.8.0",
+    "react-inview-monitor": "^2.3.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.1",
     "react-spring": "^8.0.27",

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import screen05Background from '../../images/screen05_background.png';
 import screen051 from '../../images/screen05_1.png';
 import screen052 from '../../images/screen05_2.png';
+import { Left, Right } from '../organisms/Animation';
 
 export default () => {
   return (
@@ -18,18 +19,22 @@ export default () => {
       >
         <Grid container>
           <Description5TextContainer item xs={12} md={12} lg={6}>
-            <Description5Text>
-              予定の名前に合わせて
-              <br />
-              自動でアイコンを設定！
-              <br />
-              少ない入力で、見やすい予定を作れます
-            </Description5Text>
+            <Left>
+              <Description5Text>
+                予定の名前に合わせて
+                <br />
+                自動でアイコンを設定！
+                <br />
+                少ない入力で、見やすい予定を作れます
+              </Description5Text>
+            </Left>
           </Description5TextContainer>
 
           <Description5ImageContainer item xs={12} md={12} lg={6}>
-            <Screen51 src={screen051} alt="screen051" />
-            <Screen52 src={screen052} alt="screen052" />
+            <Right>
+              <Screen51 src={screen051} alt="screen051" />
+              <Screen52 src={screen052} alt="screen052" />
+            </Right>
           </Description5ImageContainer>
         </Grid>
       </div>

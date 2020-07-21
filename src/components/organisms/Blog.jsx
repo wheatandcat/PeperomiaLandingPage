@@ -35,11 +35,11 @@ export default () => {
               }}
             >
               <BlogLink
-                href="https://wheatandcat.hatenablog.com"
+                href="https://www.wheatandcat.me"
                 rel="noreferrer noopener"
                 target="_blank"
               >
-                https://wheatandcat.hatenablog.com
+                https://www.wheatandcat.me
               </BlogLink>
             </div>
           </Grid>
