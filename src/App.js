@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { withStyles, createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider as MaterialUIThemeProvider } from "@material-ui/styles";
+import 'intersection-observer';
 import styled, { ThemeProvider } from "styled-components";
 import IconButton from "@material-ui/core/IconButton";
 import Top from "./components/pages/Top";
