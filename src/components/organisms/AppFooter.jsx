@@ -80,7 +80,7 @@ export default () => {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Backend
+                  PeperomiaBackend
                 </Link>
               </li>
               <li>
