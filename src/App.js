@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { withStyles, createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider as MaterialUIThemeProvider } from "@material-ui/styles";
 import 'intersection-observer';
-import styled, { ThemeProvider } from "styled-components";
-import IconButton from "@material-ui/core/IconButton";
+import { ThemeProvider } from "styled-components";
+
 import Top from "./components/pages/Top";
 import Tos from "./components/pages/Tos";
 import Policy from "./components/pages/Policy";
-import icon from "./images/icon.png";
-import github from "./images/github.png";
+import Information from './components/pages/Information';
+import Header from "./components/organisms/Header/Bar"
 import theme from "./theme";
 
 const uiTheme = createMuiTheme({
@@ -42,27 +42,12 @@ class App extends Component {
         <MaterialUIThemeProvider theme={uiTheme}>
           <ThemeProvider theme={theme}>
             <div className={classes.root}>
-              <AppBar position="static" color="default">
-                <IconButton href="https://peperomia.app">
-                  <img src={icon} height="30" alt="icon" />
-                </IconButton>
-                <IconButton
-                  href="https://github.com/wheatandcat/Peperomia"
-                  target="_blank"
-                  style={{}}
-                >
-                  <img
-                    src={github}
-                    height="25"
-                    alt="github"
-                    style={{ right: 0 }}
-                  />
-                </IconButton>
-              </AppBar>
-              <div style={{ backgroundColor: "#28AEB2", height: "100%" }}>
+              <Header />
+              <div style={{ backgroundColor: '#28AEB2', height: '100%' }}>
                 <Route path="/" exact component={Top} />
                 <Route path="/tos" exact component={Tos} />
                 <Route path="/policy" exact component={Policy} />
+                <Route path="/information" exact component={Information} />
               </div>
             </div>
           </ThemeProvider>
@@ -72,11 +57,7 @@ class App extends Component {
   }
 }
 
-const AppBar = styled.div`
-  display: flex;
-  justify-content: space-between;
-  background-color: ${props => props.theme.color.main};
-  height: 55px;
-`;
 
 export default withStyles(styles)(App);
+
+
