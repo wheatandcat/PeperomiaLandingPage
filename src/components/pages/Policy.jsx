@@ -12,8 +12,8 @@ export default class extends Component {
           marginBottom: '50px',
         }}
       >
-        <div class="wrapKOPIPE">
-          <div class="wrapHINAGATA">
+        <div className="wrapKOPIPE">
+          <div className="wrapHINAGATA">
             <h1>プライバシーポリシー</h1>
             <p style={{ paddingLeft: '5px' }}>
               ペペロミア（以下，「当社」といいます。）は，本アプリ上で提供するサービス（以下,「本サービス」といいます。）における，ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。
@@ -155,7 +155,7 @@ export default class extends Component {
               </li>
             </ol>
 
-            <p class="tR">以上</p>
+            <p className="tR">以上</p>
           </div>
         </div>
       </div>

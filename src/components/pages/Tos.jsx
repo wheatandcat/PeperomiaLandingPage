@@ -206,7 +206,7 @@ export default class extends Component {
               </li>
             </ol>
 
-            <p class="tR">以上</p>
+            <p className="tR">以上</p>
           </div>
         </div>
       </div>
