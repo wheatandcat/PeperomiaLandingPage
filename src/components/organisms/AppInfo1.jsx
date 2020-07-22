@@ -9,77 +9,91 @@ import screen02 from '../../images/screen02.png';
 import screen03 from '../../images/screen03.png';
 import screen04 from '../../images/screen04.png';
 import grayIcon from '../../images/gray_icon.png';
+import { Right } from '../organisms/Animation';
 
 export default () => {
   return (
     <Grid container>
       <Description1Container item lg={3} md={6} xs={12}>
-        <div>
-          <ScreenTitleContainer>
-            <img
-              src={grayIcon}
-              height="40"
-              alt="grayIcon"
-              style={{ zIndex: 2 }}
-            />
-            <ScreenTitle>
-              簡単操作で
-              <br />
-              予定を作成できる！
-            </ScreenTitle>
-          </ScreenTitleContainer>
-          <Screen1 src={screen01} alt="screen01" />
-        </div>
+        <Right>
+          <div>
+            <ScreenTitleContainer>
+              <img
+                src={grayIcon}
+                height="40"
+                alt="grayIcon"
+                style={{ zIndex: 2 }}
+              />
+              <ScreenTitle>
+                簡単操作で
+                <br />
+                予定を作成できる！
+              </ScreenTitle>
+            </ScreenTitleContainer>
+            <Screen1 src={screen01} alt="screen01" />
+          </div>
+        </Right>
       </Description1Container>
       <Description2Container item lg={3} md={6} xs={12}>
-        <div>
-          <ScreenTitleContainer>
-            <img
-              src={calendar}
-              height="40"
-              alt="grayIcon"
-              style={{ zIndex: 2 }}
-            />
-            <ScreenTitle>
-              シンプルなUIで
-              <br />
-              実装しました
-            </ScreenTitle>
-          </ScreenTitleContainer>
+        <Right>
           <div>
-            <Screen2 src={screen02} alt="screen02" />
+            <ScreenTitleContainer>
+              <img
+                src={calendar}
+                height="40"
+                alt="grayIcon"
+                style={{ zIndex: 2 }}
+              />
+              <ScreenTitle>
+                シンプルなUIで
+                <br />
+                実装しました
+              </ScreenTitle>
+            </ScreenTitleContainer>
+            <div>
+              <Screen2 src={screen02} alt="screen02" />
+            </div>
           </div>
-        </div>
+        </Right>
       </Description2Container>
       <Description3Container item lg={3} md={6} xs={12}>
-        <div>
-          <ScreenTitleContainer>
-            <img src={share} height="40" alt="grayIcon" style={{ zIndex: 2 }} />
-            <ScreenTitle>
-              アプリの設定を
-              <br />
-              WEBにシェアも可能
-            </ScreenTitle>
-          </ScreenTitleContainer>
-        </div>
-        <CenterContainer>
-          <Screen3 src={screen03} alt="screen03" />
-        </CenterContainer>
+        <Right>
+          <div>
+            <ScreenTitleContainer>
+              <img
+                src={share}
+                height="40"
+                alt="grayIcon"
+                style={{ zIndex: 2 }}
+              />
+              <ScreenTitle>
+                アプリの設定を
+                <br />
+                WEBにシェアも可能
+              </ScreenTitle>
+            </ScreenTitleContainer>
+          </div>
+          <CenterContainer>
+            <Screen3 src={screen03} alt="screen03" />
+          </CenterContainer>
+        </Right>
       </Description3Container>
       <Description4Container item lg={3} md={6} xs={12}>
-        <div>
-          <ScreenTitleContainer>
-            <img src={edit} height="35" alt="edit" style={{ zIndex: 2 }} />
-            <ScreenTitle>
-              詳しい予定も
-              <br />
-              書き込みできます
-            </ScreenTitle>
-          </ScreenTitleContainer>
-        </div>
-        <CenterContainer>
-          <Screen3 src={screen04} alt="screen04" />
-        </CenterContainer>
+        <Right>
+          <div>
+            <ScreenTitleContainer>
+              <img src={edit} height="35" alt="edit" style={{ zIndex: 2 }} />
+              <ScreenTitle>
+                詳しい予定も
+                <br />
+                書き込みできます
+              </ScreenTitle>
+            </ScreenTitleContainer>
+          </div>
+          <CenterContainer>
+            <Screen3 src={screen04} alt="screen04" />
+          </CenterContainer>
+        </Right>
       </Description4Container>
     </Grid>
   );

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-
 // Hook
 function useWindowSize() {
   const isClient = typeof window === 'object';
 
+  /*  eslint-disable react-hooks/exhaustive-deps */
   function getSize() {
     return {
       width: isClient ? window.innerWidth : undefined,

@@ -15,9 +15,9 @@ export default () => {
       <Up>
         <Doujinshi />
       </Up>
-      <Right>
-        <AppInfo1 />
-      </Right>
+
+      <AppInfo1 />
+
       <AppInfo2 />
       <Right>
         <GitHub />
