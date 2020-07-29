@@ -1,36 +1,37 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { withStyles, createMuiTheme } from "@material-ui/core/styles";
-import { ThemeProvider as MaterialUIThemeProvider } from "@material-ui/styles";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { withStyles, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider as MaterialUIThemeProvider } from '@material-ui/styles';
 import 'intersection-observer';
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from 'styled-components';
 
-import Top from "./components/pages/Top";
-import Tos from "./components/pages/Tos";
-import Policy from "./components/pages/Policy";
+import Top from './components/pages/Top';
+import Tos from './components/pages/Tos';
+import Policy from './components/pages/Policy';
 import Information from './components/pages/Information';
-import Header from "./components/organisms/Header/Bar"
-import theme from "./theme";
+import About from './components/pages/About';
+import Header from './components/organisms/Header/Bar';
+import theme from './theme';
 
 const uiTheme = createMuiTheme({
   palette: {
     primary: {
-      main: theme.color.lightGreen
+      main: theme.color.lightGreen,
     },
     secondary: {
-      main: theme.color.lightBlue
+      main: theme.color.lightBlue,
     },
     default: {
-      main: theme.color.main
-    }
-  }
+      main: theme.color.main,
+    },
+  },
 });
 
 const styles = {
   root: {
     flexGrow: 1,
-    height: "100vh"
-  }
+    height: '100vh',
+  },
 };
 
 class App extends Component {
@@ -48,6 +49,7 @@ class App extends Component {
                 <Route path="/tos" exact component={Tos} />
                 <Route path="/policy" exact component={Policy} />
                 <Route path="/information" exact component={Information} />
+                <Route path="/about" exact component={About} />
               </div>
             </div>
           </ThemeProvider>
@@ -57,7 +59,4 @@ class App extends Component {
   }
 }
 
-
 export default withStyles(styles)(App);
-
-

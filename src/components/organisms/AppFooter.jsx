@@ -103,11 +103,11 @@ export default () => {
               </li>
               <li>
                 <Link
-                  href="https://github.com/wheatandcat/PeperomiaWebSite"
+                  href="https://github.com/wheatandcat/PeperomiaLandingPage"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  PeperomiaWebSite
+                  PeperomiaLandingPage
                 </Link>
               </li>
               <li>
@@ -171,6 +171,15 @@ export default () => {
 
         <Grid item xs={12} md={6} lg={3}>
           <FooterTitle>Rules</FooterTitle>
+          <FooterLink>
+            <a
+              href="https://peperomia.app/about"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              ペペロミアとは
+            </a>
+          </FooterLink>
 
           <FooterLink>
             <a
@@ -208,9 +217,10 @@ const ProductName = styled.div`
 `;
 
 const FooterContainer = styled.div`
+  background-color: ${(props) => props.theme.color.highLightGray};
+  padding: 0 2rem;
   padding-bottom: 150px;
   width: 100%;
-  background-color: ${(props) => props.theme.color.white};
 `;
 
 const FooterTitle = styled.div`
