@@ -25,7 +25,7 @@ export default class extends Component {
               技術書典7にてペペロミアの開発解説本を販売します。
             </Description>
             <EventInfo>
-              <div>9月22日（日）</div>
+              <div>2019年 9月22日（日）</div>
               <div>池袋サンシャインシティ 展示ホールC/D (文化会館ビル2/3F)</div>
               <div>
                 配置:<Place>い04C</Place>
