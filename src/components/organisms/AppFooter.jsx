@@ -103,11 +103,11 @@ export default () => {
               </li>
               <li>
                 <Link
-                  href="https://github.com/wheatandcat/PeperomiaWebSite"
+                  href="https://github.com/wheatandcat/PeperomiaLandingPage"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  PeperomiaWebSite
+                  PeperomiaLandingPage
                 </Link>
               </li>
               <li>
