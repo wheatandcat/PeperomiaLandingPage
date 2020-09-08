@@ -10,6 +10,7 @@ import Tos from './components/pages/Tos';
 import Policy from './components/pages/Policy';
 import Information from './components/pages/Information';
 import About from './components/pages/About';
+import Book from './components/pages/Book';
 import Header from './components/organisms/Header/Bar';
 import theme from './theme';
 
@@ -50,6 +51,7 @@ class App extends Component {
                 <Route path="/policy" exact component={Policy} />
                 <Route path="/information" exact component={Information} />
                 <Route path="/about" exact component={About} />
+                <Route path="/books" exact component={Book} />
               </div>
             </div>
           </ThemeProvider>

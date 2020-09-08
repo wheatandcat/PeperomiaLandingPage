@@ -1,67 +1,50 @@
 import React, { Component } from 'react';
-import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
-import cover from '../../images/doujinshi/cover.png';
-import backcover from '../../images/doujinshi/backcover.png';
-import spine from '../../images/doujinshi/spine.png';
+import cover from '../../images/doujinshi/cover02.jpg';
 import boothicon from '../../images/doujinshi/200x40_01.png';
 import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 export default class extends Component {
   render() {
     return (
-      <Container item xs={12}>
-        <Grid container justify="center">
-          <Grid item sm={6} xs={12}>
-            <BookContainer>
-              <BookImage src={backcover} />
-              <BookImage src={spine} />
-              <BookImage src={cover} />
-            </BookContainer>
-          </Grid>
-          <Grid item sm={6} xs={12} style={{ paddingTop: '15px' }}>
+      <>
+        <ItemContainer>
+          <div>
+            <BookImage src={cover} />
+          </div>
+          <div>
             <Title>同人誌作りました。</Title>
             <Description>
-              技術書典7にてペペロミアの開発解説本を販売します。
+              技術書典9に出展予定（2020年9月12日 ～ 9月22日）
             </Description>
             <EventInfo>
-              <div>2019年 9月22日（日）</div>
-              <div>池袋サンシャインシティ 展示ホールC/D (文化会館ビル2/3F)</div>
               <div>
-                配置:<Place>い04C</Place>
+                ペペロミアの2019〜2020年のリリース内容の振り返りと現在のプロジェクトのアーキテクトについて解説しています。
               </div>
-              <LinkTitle>■ サークル情報</LinkTitle>
-              <Link>
+              <br />
+              <MainLink>
                 <a
-                  href="https://techbookfest.org/event/tbf07/circle/5676671030001664"
+                  href="https://booth.pm/ja/items/2359446"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  https://techbookfest.org/event/tbf07/circle/5676671030001664
+                  内容の詳細は、こちら
                 </a>
-              </Link>
+              </MainLink>
+              <br />
+              <SubLink>
+                <RouteLink to="/books">過去の技術本一覧 ▼</RouteLink>
+              </SubLink>
             </EventInfo>
-          </Grid>
-        </Grid>
-        <Grid container justify="center">
-          <Grid item xs={12} md={9} lg={6}>
-            <BookTitkeContainer>
-              <Description>
-                React Native開発日記
-                -スケジュール管理アプリ「ペペロミア」が出来るまで-
-              </Description>
-              <Price>¥1,000</Price>
-            </BookTitkeContainer>
-          </Grid>
-          <Grid item md={3} lg={6}></Grid>
-        </Grid>
-        <BoothContainer container justify="center">
-          <Grid item lg={1}></Grid>
-          <BoothIconContainer item xs={12} md={6} lg={5}>
+          </div>
+        </ItemContainer>
+        <ItemContainer2>
+          <div>
             <BoothIcon src={boothicon} />
             <BoothText>BOOTHにてダウンロード販売も行っています。</BoothText>
-          </BoothIconContainer>
-          <CycleContainer item xs={12} md={6} lg={4}>
+          </div>
+          <StoreContainer>
             <a
               href="https://wheatandcat.booth.pm/items/1560279"
               rel="noopener noreferrer"
@@ -72,29 +55,68 @@ export default class extends Component {
                 <CheckButton variant="contained">商品ページを確認</CheckButton>
               </Cycle>
             </a>
-          </CycleContainer>
-          <Grid item lg={2}></Grid>
-        </BoothContainer>
-      </Container>
+          </StoreContainer>
+        </ItemContainer2>
+      </>
     );
   }
 }
 
-const Container = styled(Grid)`
+const ItemContainer = styled.div`
   background-color: #4caf50;
   padding: 15px;
   border: solid 3px #6fcf97;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > div:first-child {
+    padding: 0 1rem;
+    width: 240px;
+  }
+
+  > div:last-child {
+    width: 480px;
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    padding: 1rem 0;
+
+    > div:first-child {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    > div:last-child {
+      padding: 1rem 1.5rem;
+      width: 100%;
+    }
+  }
 `;
 
-const BookContainer = styled.div`
+const ItemContainer2 = styled.div`
+  background-color: #98d181;
+  padding: 15px;
+  border: solid 3px #6fcf97;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding-top: 15px;
+  justify-content: center;
+
+  > div {
+    padding: 0 1rem;
+    width: 360px;
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 const BookImage = styled.img`
-  height: 230px;
+  height: 260px;
   border: solid 1px ${(props) => props.theme.color.gray};
 `;
 
@@ -104,6 +126,10 @@ const Title = styled.div`
   font-weight: 900;
   padding-bottom: 1rem;
   padding-left: 15px;
+
+  @media screen and (max-width: 900px) {
+    text-align: center;
+  }
 `;
 
 const Description = styled.div`
@@ -111,6 +137,11 @@ const Description = styled.div`
   font-size: 0.9rem;
   font-weight: 600;
   padding: 0 15px;
+
+  @media screen and (max-width: 900px) {
+    font-size: 0.7rem;
+    text-align: center;
+  }
 `;
 
 const EventInfo = styled.div`
@@ -121,47 +152,20 @@ const EventInfo = styled.div`
   line-height: 1.6rem;
 `;
 
-const Place = styled.span`
-  color: ${(props) => props.theme.color.white};
-  font-size: 1.3rem;
-  font-weight: 600;
-  padding-left: 5px;
-  line-height: 2rem;
-`;
-
-const LinkTitle = styled.div`
-  padding-top: 5px;
-`;
-
-const Link = styled.div`
+const SubLink = styled.div`
+  font-size: 10px;
   line-height: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 `;
 
-const BookTitkeContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0;
-`;
-
-const Price = styled.div`
-  color: ${(props) => props.theme.color.black};
-  font-size: 0.9rem;
-  font-weight: 800;
-`;
-
-const BoothContainer = styled(Grid)`
-  background-color: #98d181;
-  margin-top: 10px;
-
-  position: relative;
-`;
-
-const BoothIconContainer = styled(Grid)`
-  padding: 50px;
+const MainLink = styled.div`
+  font-size: 14px;
+  line-height: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 const BoothIcon = styled.img`
@@ -173,21 +177,25 @@ const BoothText = styled.div`
   color: ${(props) => props.theme.color.black};
   font-size: 0.9rem;
   font-weight: 800;
+
+  @media screen and (max-width: 900px) {
+    text-align: center;
+  }
 `;
 
-const CycleContainer = styled(Grid)`
+const StoreContainer = styled.div`
   position: relative;
-  height: 185px;
+  width: 200px;
+  height: 200px;
 `;
 
 const Cycle = styled.div`
+  left: 25%;
   width: 200px;
   height: 200px;
   background-color: #f2f2f2;
   border-radius: 100px;
   position: absolute;
-  top: -25px;
-  right: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,3 +218,5 @@ const CheckButton = styled(Button)`
   border-radius: 25px !important;
   min-height: 40px !important;
 `;
+
+const RouteLink = styled(Link)``;
