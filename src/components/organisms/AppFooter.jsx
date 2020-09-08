@@ -166,6 +166,15 @@ export default () => {
               Blog
             </a>
           </FooterLink>
+          <FooterLink>
+            <a
+              href="https://peperomia.app/books"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              技術本
+            </a>
+          </FooterLink>
           <br />
         </Grid>
 
